@@ -19,5 +19,10 @@ public class EmpleadoPermanente extends Empleado {
         int antiguedad = LocalDate.now().getYear() - this.fechaDeIngreso.getYear();
         return this.montoBase * this.categoria.coeficiente * (1 + 0.02 * antiguedad);
     }
+
+
+    public int calcularAntiguedad() {
+        return LocalDate.now().getYear() - this.fechaDeIngreso.getYear();
+    }
     
 }
